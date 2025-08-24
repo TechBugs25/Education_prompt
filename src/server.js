@@ -172,6 +172,9 @@ async function askChatGPT(prompt) {
 // ------------------------------
 // REST Endpoints
 // ------------------------------
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Live successfully" });
+});
 
 app.get("/chat", async (req, res) => {
   let { prompt } = req.query;
